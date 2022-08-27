@@ -30,6 +30,11 @@ export default {
   props: {
     msg: String,
      },
+     data() {
+    return {
+      message: ''
+    }
+  }
 };
 </script>
 
