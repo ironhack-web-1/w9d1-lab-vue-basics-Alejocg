@@ -1,51 +1,68 @@
 <template>
-  <footer class="section bg-footer">
-    <div class="container">
-      <div>
-        <h6 class="footer-heading text-uppercase text-white">Information 1</h6>
-        <ul class="footer-link mt-4">
-          <li><a href="#!">Sitemap</a></li>
-          <li><a href="#!">Our team</a></li>
-          <li><a href="#!">Terms of Services</a></li>
-        </ul>
-      </div>
-      <div>
-        <h6 class="footer-heading text-uppercase text-white">Help 2</h6>
-        <ul class="footer-link mt-4">
-          <li><a href="#!">Register</a></li>
-          <li><a href="#!">Sign in</a></li>
-          <li><a href="#!">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="footer-link">
-        <h6 class="footer-heading text-uppercase text-white">Contact us 3</h6>
-        <p class="contact-info mt-4">Need help ?</p>
-        <p class="contact-info">+XX XX-XX-XX-XX-XX</p>
-        <div>
-          <ul class="list-inline">
-            <li class="list-inline-item">
-              <a href="#!"
-                ><i class="fab facebook footer-social-icon fa-facebook-f"></i
-              ></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#!"
-                ><i class="fab twitter footer-social-icon fa-twitter"></i
-              ></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#!"
-                ><i class="fab instagram footer-social-icon fa-instagram"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+<div class="footer">
+  <div class="inner-footer">
+
+<!--  for company name and description -->
+    <div class="footer-items">
+      <h1>VUE JS</h1>
+      <p>Cosillas.</p>
     </div>
-    <div class="text-center mt-5">
-      <p class="footer-alt">2022 © Que tal</p>
+
+<!--  for quick links  -->
+    <div class="footer-items">
+      <h3>Quick Links</h3>
+      <div class="border1"></div> <!--for the underline -->
+        <ul>
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>Search</li></a>
+          <a href="#"><li>Contact</li></a>
+          <a href="#"><li>About</li></a>
+        </ul>
     </div>
-  </footer>
+
+<!--  for some other links -->
+    <div class="footer-items">
+      <h3>Recipes</h3>
+      <div class="border1"></div>  <!--for the underline -->
+        <ul>
+          <a href="#"><li>Indian</li></a>
+          <a href="#"><li>Chinese</li></a>
+          <a href="#"><li>Mexican</li></a>
+          <a href="#"><li>Italian</li></a>
+        </ul>
+    </div>
+
+<!--  for contact us info -->
+    <div class="footer-items">
+      <h3>Contact us</h3>
+      <div class="border1"></div>
+        <ul>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>XYZ, abc</li>
+          <li><i class="fa fa-phone" aria-hidden="true"></i>123456789</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i>xyz@gmail.com</li>
+        </ul> 
+      
+<!--   for social links -->
+        <div class="social-media">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-google-plus-square"></i></a>
+        </div> 
+    </div>
+  </div>
+  
+<!--   Footer Bottom start  -->
+  <div class="footer-bottom">
+    Copyright &copy; XXXXX 2022.
+  </div>
+</div>
+  
+<!--   Footer Bottom end -->
+  
+<!--   FOOTER END -->
+  
+</body>  
 </template>
 
 <script>
@@ -58,188 +75,125 @@ export default {
 </script>
 
 <style scoped>
-*,
-::after,
-::before {
-  box-sizing: border-box;
+/* FOOTER */
+.footer {
+	width: 100%;
+	background: #333;
+	display: block;
+  
+ }
+
+ .inner-footer {
+	 width: 95%;
+	 margin: auto;
+	 padding: 30px 10px;
+	 display: flex;
+	 flex-wrap: wrap;
+	 box-sizing: border-box;
+	 justify-content: center;
+ }
+
+.footer-items {
+	width: 25%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	color: #fff;
 }
 
-body {
-  margin: 0;
-  line-height: 1.5;
+.footer-items p {
+	font-size: 16px;
+	text-align: justify;
+	line-height: 25px;
+	color: #fff;
 }
 
-.container {
-  margin-top: 2em;
-  display: flex;
-  justify-content: space-between;
+.footer-items h1 {
+	color: #fff;
 }
 
-h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2;
-  font-size: 1rem;
+.border1 {
+	height: 3px;
+	width: 40px;
+	background: #ff9800;
+	color: #ff9800;
+	background-color: #ff9800;
+	border: 0px;
 }
 
-.text-uppercase {
-  text-transform: uppercase;
+ul {
+	list-style: none;
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 0.5px;	
+ }
+
+ul a {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	transition: 0.3s;
 }
 
-.text-white {
-  color: #fff;
+ul a:hover {
+	color: #ff9800;
 }
 
-.text-center {
-  text-align: center;
+ul li {
+	margin: 10px 0;
+	height: 25px;
 }
 
-.mt-4 {
-  margin: 0;
-  margin-top: 1.5rem;
+li i {
+	margin-right: 20px;
 }
 
-.bg-footer {
-  background-color: #33383c;
-  font-family: "Raleway", sans-serif;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
+.social-media {
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
 }
 
-.footer-heading {
-  letter-spacing: 2px;
-  display: flex;
-  justify-content: center;
+.social-media a {
+	text-decoration: none;
 }
 
-.footer-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 0;
-  list-style: none;
-
-  a {
-    color: #acacac;
-    line-height: 40px;
-    font-size: 16px;
-    transition: all 0.2s;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 2px;
-
-    &:hover {
-      color: #e0952e;
-    }
-  }
+.social-media i {
+	height: 25px;
+	width: 25px;
+	margin: 20px 10px;
+	padding: 4px;
+	color: #fff;
+	transition: 0.5s;
 }
 
-.list-inline {
-  padding-left: 0;
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 1rem;
+.social-media i:hover {
+	transform: scale(1.5);
 }
 
-.list-inline-item {
-  &:not(:last-child) {
-    margin-right: 0.5rem;
-  }
-
-  display: inline-block;
+.footer-bottom {
+	padding: 10px;
+	background: rgba(55, 44, 44, 0.466);
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
 }
 
-.contact-info {
-  color: #acacac;
-  font-size: 16px;
+/* for tablet mode view */
+
+@media screen and (max-width: 1275px) {
+	.footer-items {
+		width: 50%;
+	}
 }
 
-.footer-social-icon {
-  font-size: 15px;
-  height: 34px;
-  width: 34px;
-  line-height: 34px;
-  border-radius: 3px;
-  text-align: center;
-  display: inline-block;
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+	.footer-items {
+		width: 100%;
+	}
 }
 
-.facebook {
-  transition: transform 1s ease 0s;
-  background-color: #4e71a8;
-  color: #ffffff;
-}
 
-.twitter {
-  transition: transform 1s ease 0s;
-  background-color: #55acee;
-  color: #ffffff;
-}
-
-.instagram {
-  transition: transform 1s ease 0s;
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-  color: #ffffff;
-}
-
-/* HOVER */
-
-.facebook:hover,
-.twitter:hover,
-.instagram:hover {
-  transform: rotate(360deg);
-}
-
-.footer-alt {
-  color: #acacac;
-}
-
-.footer-heading {
-  position: relative;
-  padding-bottom: 12px;
-
-  &:after {
-    content: "";
-    width: 25px;
-    border-bottom: 1px solid #fff;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    display: block;
-    border-bottom: 3px solid #e0952e;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-    width: 100%;
-    padding-right: var(--bs-gutter-x, 0.75rem);
-    padding-left: var(--bs-gutter-x, 0.75rem);
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
 </style>

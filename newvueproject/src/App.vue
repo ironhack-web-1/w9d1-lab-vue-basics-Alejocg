@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 <template>
 
 
@@ -7,9 +9,13 @@
 
     <img alt="Vue logo" src="./assets/logo.png" />
 
-    <HelloWorld msg="Alejo's Vue.js testing ground" />
+    <HelloWorld msg="Alejo's Vue.js testing ground!" />
+    
+
+    <formMain></formMain>
 
     <footerMain></footerMain>
+    
 
   </div>
 </template>
@@ -18,6 +24,7 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import navBar from "./components/navBar.vue";
 import footerMain from "./components/footerMain.vue";
+import formMain from "./components/formMain.vue";
 
 export default {
   name: "App",
@@ -25,17 +32,25 @@ export default {
     HelloWorld,
     footerMain,
     navBar,
+    formMain,
+    
   },
+
+
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
+  align-items: center;
+
+  
 }
+
 </style>
