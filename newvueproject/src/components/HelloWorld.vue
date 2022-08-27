@@ -5,8 +5,8 @@
     <p>
       Aquí voy a hacer mis experimentos con VUE.js.
     </p>
-    <div> Esto es un string: {{hola}} y una suma: {{math}}</div>
-    <div> Esto es una string de una funcion {{function1}}</div>
+    <div> Esto es un string: {{hola}} y una suma calculada en otro componente: {{math}}</div>
+    <div> Esto es una string de una funcion: </div>
   </div>
 </template>
 
@@ -23,7 +23,6 @@ export default {
       math: 2+2,
       property: "blank",
 
-    
   
     }
   }
@@ -42,18 +41,4 @@ div {
   
 }
 
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>

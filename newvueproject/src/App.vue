@@ -35,10 +35,10 @@ export default {
     formMain,
     
   },
-
-
 };
 </script>
+
+
 
 <style scoped>
 #app {

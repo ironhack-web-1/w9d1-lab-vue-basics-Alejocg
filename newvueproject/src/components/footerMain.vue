@@ -62,7 +62,7 @@
   
 <!--   FOOTER END -->
   
-</body>  
+  
 </template>
 
 <script>
@@ -114,9 +114,9 @@ export default {
 .border1 {
 	height: 3px;
 	width: 40px;
-	background: #ff9800;
-	color: #ff9800;
-	background-color: #ff9800;
+	background: #04AA6D;
+	color: #04AA6D;
+	background-color: #04AA6D;
 	border: 0px;
 }
 
@@ -135,7 +135,7 @@ ul a {
 }
 
 ul a:hover {
-	color: #ff9800;
+	color: #04AA6D;
 }
 
 ul li {

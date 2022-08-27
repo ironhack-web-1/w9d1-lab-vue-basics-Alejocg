@@ -9,7 +9,7 @@
       <label>Type something</label>
     </div>
     <div class="user-box">
-      <p>El mensaje es: {{ message }}</p>
+      <p>El mensaje es: <div id="message1"> {{ message }} </div></p>
       
     </div>
     <a href="#">
@@ -40,29 +40,39 @@ export default {
 
 <style scoped>
 
+#message1 {
+
+color: red
+
+}
 
 .login-box {
   
-  margin: 50px;
   display: flex;
   flex-direction: column;
-  top: 50%;
-  left: 50%;
-  width: 400px;
+  width: 100%;
+  height: 50%;
   padding: 40px;
- align-items: center;
-  background: rgba(0,0,0,.5);
+  align-items: center;
+  background: #333;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
-  border-radius: 10px;
+  border-radius: 50px;
   align-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
   
+}
+
+.login-box p {
+  color: #04AA6D;
 }
 
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #fff;
+  color: #04AA6D;
   text-align: center;
 }
 
@@ -96,7 +106,7 @@ export default {
 .login-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #03e9f4;
+  color: #fff;
   font-size: 12px;
 }
 
@@ -104,7 +114,7 @@ export default {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #03e9f4;
+  color: #fff;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -115,13 +125,13 @@ export default {
 }
 
 .login-box a:hover {
-  background: #03e9f4;
-  color: #fff;
+  background: #fff;
+  color: #04AA6D;
   border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
+  box-shadow: 0 0 5px #04AA6D,
+              0 0 25px #fff,
+              0 0 50px #fff,
+              0 0 100px #fff;
 }
 
 .login-box a span {
@@ -134,7 +144,7 @@ export default {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
+  background: linear-gradient(90deg, transparent, #fff);
   animation: btn-anim1 1s linear infinite;
 }
 
@@ -152,7 +162,7 @@ export default {
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
+  background: linear-gradient(180deg, transparent, #fff);
   animation: btn-anim2 1s linear infinite;
   animation-delay: .25s
 }
@@ -171,7 +181,7 @@ export default {
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
+  background: linear-gradient(270deg, transparent, #04AA6D);
   animation: btn-anim3 1s linear infinite;
   animation-delay: .5s
 }
@@ -190,7 +200,7 @@ export default {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
+  background: linear-gradient(360deg, transparent, #04AA6D);
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
 }
@@ -203,4 +213,6 @@ export default {
     bottom: 100%;
   }
 }
+
+
 </style>
