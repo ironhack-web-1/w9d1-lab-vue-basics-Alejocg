@@ -23,13 +23,13 @@
 
 <!--  for some other links -->
     <div class="footer-items">
-      <h3>Recipes</h3>
+      <h3>Links</h3>
       <div class="border1"></div>  <!--for the underline -->
         <ul>
-          <a href="#"><li>Indian</li></a>
-          <a href="#"><li>Chinese</li></a>
-          <a href="#"><li>Mexican</li></a>
-          <a href="#"><li>Italian</li></a>
+          <a href="#"><li>Test 1</li></a>
+          <a href="#"><li>Test 2</li></a>
+          <a href="#"><li>Test 3</li></a>
+          <a href="#"><li>Test 4</li></a>
         </ul>
     </div>
 
@@ -39,8 +39,8 @@
       <div class="border1"></div>
         <ul>
           <li><i class="fa fa-map-marker" aria-hidden="true"></i>XYZ, abc</li>
-          <li><i class="fa fa-phone" aria-hidden="true"></i>123456789</li>
-          <li><i class="fa fa-envelope" aria-hidden="true"></i>xyz@gmail.com</li>
+          <li><i class="fa fa-phone" aria-hidden="true"></i>+34 600 123 123</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i>hola@gmail.com</li>
         </ul> 
       
 <!--   for social links -->
@@ -70,7 +70,7 @@ export default {
   name: "footerMain",
   props: {
     msg: String,
-  },
+  } ,
 };
 </script>
 
