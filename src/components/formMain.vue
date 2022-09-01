@@ -1,27 +1,24 @@
-
 <template>
-
-<div class="login-box">
-  <h2>Test form input</h2>
-  <form>
-    <div class="user-box">
-      <input type="text" name="" required="" v-model="message">
-      <label>Type something</label>
-    </div>
-    <div class="user-box">
-      <p>El mensaje es: <div id="message1"> {{ message }} </div></p>
-      
-    </div>
-    <a href="#">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Submit
-    </a>
-  </form>
-</div>
-
+  <div class="login-box">
+    <h2>Test form input</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="" required="" v-model="message" />
+        <label>Type something</label>
+      </div>
+      <div class="user-box">
+        <p>El mensaje es:</p>
+        <div id="message1">{{ message }}</div>
+      </div>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -29,25 +26,21 @@ export default {
   name: "formMain",
   props: {
     msg: String,
-     },
-     data() {
+  },
+  data() {
     return {
-      message: ''
-    }
-  }
+      message: "",
+    };
+  },
 };
 </script>
 
 <style scoped>
-
 #message1 {
-
-color: red
-
+  color: red;
 }
 
 .login-box {
-  
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -56,23 +49,21 @@ color: red
   align-items: center;
   background: #333;
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 50px;
   align-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
-
-  
 }
 
 .login-box p {
-  color: #04AA6D;
+  color: #04aa6d;
 }
 
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #04AA6D;
+  color: #04aa6d;
   text-align: center;
 }
 
@@ -93,13 +84,13 @@ color: red
 }
 .login-box .user-box label {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   padding: 10px 0;
   font-size: 16px;
   color: #fff;
   pointer-events: none;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .login-box .user-box input:focus ~ label,
@@ -119,19 +110,16 @@ color: red
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
-  transition: .5s;
+  transition: 0.5s;
   margin-top: 40px;
-  letter-spacing: 4px
+  letter-spacing: 4px;
 }
 
 .login-box a:hover {
   background: #fff;
-  color: #04AA6D;
+  color: #04aa6d;
   border-radius: 5px;
-  box-shadow: 0 0 5px #04AA6D,
-              0 0 25px #fff,
-              0 0 50px #fff,
-              0 0 100px #fff;
+  box-shadow: 0 0 5px #04aa6d, 0 0 25px #fff, 0 0 50px #fff, 0 0 100px #fff;
 }
 
 .login-box a span {
@@ -152,7 +140,8 @@ color: red
   0% {
     left: -100%;
   }
-  50%,100% {
+  50%,
+  100% {
     left: 100%;
   }
 }
@@ -164,14 +153,15 @@ color: red
   height: 100%;
   background: linear-gradient(180deg, transparent, #fff);
   animation: btn-anim2 1s linear infinite;
-  animation-delay: .25s
+  animation-delay: 0.25s;
 }
 
 @keyframes btn-anim2 {
   0% {
     top: -100%;
   }
-  50%,100% {
+  50%,
+  100% {
     top: 100%;
   }
 }
@@ -181,16 +171,17 @@ color: red
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #04AA6D);
+  background: linear-gradient(270deg, transparent, #04aa6d);
   animation: btn-anim3 1s linear infinite;
-  animation-delay: .5s
+  animation-delay: 0.5s;
 }
 
 @keyframes btn-anim3 {
   0% {
     right: -100%;
   }
-  50%,100% {
+  50%,
+  100% {
     right: 100%;
   }
 }
@@ -200,19 +191,18 @@ color: red
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #04AA6D);
+  background: linear-gradient(360deg, transparent, #04aa6d);
   animation: btn-anim4 1s linear infinite;
-  animation-delay: .75s
+  animation-delay: 0.75s;
 }
 
 @keyframes btn-anim4 {
   0% {
     bottom: -100%;
   }
-  50%,100% {
+  50%,
+  100% {
     bottom: 100%;
   }
 }
-
-
 </style>

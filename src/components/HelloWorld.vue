@@ -9,42 +9,61 @@
     </div>
     <div>Esto es una string de una funcion: {{ superFunction() }}</div>
     <p></p>
-    <!-- Click para cambiar mostrar mensaje y cambiar variable a true-->
-    <button v-on:click="greet">Clickame</button>
-    <h1 v-if="first">Hello! Gracias por clickar!</h1>
-    <h1 v-else>Va, haz click arriba</h1>
 
-    <!-- Click para cambiar mostrar mensaje y cambiar variable a true-->
-    <button v-on:click="showClick"><div>Clickeame API</div></button>
-    <div v-if="show" id="API"> Aqui el tochaco de la API:{{ projects }}</div>
-    <h1 v-else>Click para la API</h1>
-    
-    <!-- Click para cambiar mostrar mensaje y cambiar variable a true-->
-    <button v-on:click="showLuz"><div>Apaga la luz</div></button>
-    <div v-if="luz"> Luz apagada </div>
-    <h1 v-else>Apaga la luz</h1>
-    
-    <article id="forEachBox"> 
-    <h1>Esto es un for-each de la api:</h1>
-    <div v-for="item in projects" :key="item.uuid" id="proyectos">
-    <p> Proyecto nº{{item.uuid}} trata de {{item.name}}</p> 
+    <div id="container">
+      <!-- Click para cambiar mostrar mensaje y cambiar variable a true-->
+      <div class="row1-container">
+        <div class="box box-down cyan">
+          <button v-on:click="greet">Clickame</button>
+          <h2 v-if="first">Hello! Gracias por clickar!</h2>
+          <h2 v-else>Va, haz click arriba</h2>
+        </div>
+
+        <!-- Click para cambiar mostrar mensaje y cambiar variable a true-->
+        <div class="box red">
+          <button v-on:click="showClick"><div>Clickeame API</div></button>
+          <div v-if="show" id="API">
+            Aqui el tochaco de la API:{{ projects }}
+          </div>
+          <h2 v-else>Click para la API</h2>
+        </div>
+      </div>
+
+      <!-- Click para cambiar mostrar mensaje y cambiar variable a true-->
+      <div class="box box-down blue">
+        <button v-on:click="showLuz"><div>Apaga la luz</div></button>
+        <div v-if="luz">Luz apagada</div>
+        <h2 v-else>Apaga la luz</h2>
+      </div>
+
+      <div class="row2-container">
+        <div class="box orange">
+          <button @click="submitForm">Enviar</button>
+          <h2>Test on click</h2>
+        </div>
+      </div>
+
+      <div class="box">
+        <form>
+          <input type="text" placeholder="Tu nombre" />
+        </form>
+      </div>
+
+      <article id="forEachBox">
+        <h1>Esto es un for-each de la api:</h1>
+        <div v-for="item in projects" :key="item.uuid" id="proyectos">
+          <p>Proyecto nº{{ item.uuid }} trata de {{ item.name }}</p>
+        </div>
+      </article>
     </div>
-   </article>
-
-
   </div>
-
-  
-
-
-
 </template>
 
 <script>
 export default {
   name: "HelloWorld",
   props: {
-    msg: String,
+    placeholder: String,
   },
 
   data() {
@@ -56,7 +75,10 @@ export default {
       first: false,
       show: false,
       luz: false,
-      color: 'white',
+      color: "white",
+      name: null,
+      email: null,
+      aboutMe: null,
       post1: [
         { title: "El vue" },
         { description: "Codigo guay" },
@@ -89,13 +111,16 @@ export default {
 
     showLuz: function (event) {
       this.luz = true;
-      this.color = 'black';
+      this.color = "black";
       alert("Apagando luz");
-      
     },
 
     superFunction() {
       return (this.superString = "Hola que tal");
+    },
+
+    submitForm() {
+      alert("Pa que clickas");
     },
   },
 
@@ -112,9 +137,7 @@ export default {
 </script>
 
 <style scoped>
-
-
-#oscuro{
+#oscuro {
   background-color: v-bind(color);
 }
 
@@ -129,13 +152,9 @@ button {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-}
-
-div {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  flex-direction: column;
+  width: 100px;
+  align-content: center;
+  justify-content: center;
 }
 
 #API {
@@ -145,12 +164,109 @@ div {
 }
 
 #proyectos {
-  display:flex;
+  display: flex;
   align-content: center;
   align-items: center;
   background-color: #04aa6d;
   font-weight: 400;
-  margin:5px;
+  margin: 5px;
   border-radius: 50px;
+  justify-content: center;
+}
+
+/* Hola */
+
+body {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
+
+h2:first-of-type {
+  font-weight: 200;
+  color: hsl(234, 12%, 34%);
+}
+
+h2:last-of-type {
+  color: hsl(234, 12%, 34%);
+}
+
+@media (max-width: 400px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.box p {
+  color: hsl(229, 6%, 66%);
+}
+
+.box {
+  border-radius: 5px;
+  box-shadow: 0px 30px 40px -20px hsl(229, 6%, 66%);
+  padding: 30px;
+  margin: 20px;
+  border-radius: 20px;
+  width: 200px;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+img {
+  float: right;
+}
+
+@media (max-width: 450px) {
+  .box {
+    height: 200px;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+  .box {
+    text-align: center;
+    height: 180px;
+  }
+}
+
+.cyan {
+  border-top: 3px solid;
+  color: cyan;
+}
+.red {
+  border-top: 3px solid;
+  color: red;
+}
+.blue {
+  border-top: 3px solid;
+  color: blue;
+}
+.orange {
+  border-top: 3px solid;
+  color: orange;
+}
+
+h2 {
+  color: darkblue;
+  font-weight: 300;
+}
+
+.box form {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 </style>
